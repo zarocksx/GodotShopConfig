@@ -301,6 +301,7 @@
 			engine.setProgressFunc((current, total) => {
 
 				if (total > 0) {
+					console.log(current +'/'+ total)
 					statusProgressInner.style.width = current/total * 100 + '%';
 					setStatusMode('progress');
 					if (current === total) {
