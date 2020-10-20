@@ -4,9 +4,12 @@
 [ext_resource path="res://assets/Bike.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Bike.gd" type="Script" id=3]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0, 0, 0, 1 )
 metallic = 1.0
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0, 0, 0, 1 )
@@ -15,29 +18,26 @@ albedo_color = Color( 0, 0, 0, 1 )
 albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0.52549, 0.52549, 0.52549, 1 )
 metallic = 1.0
 roughness = 0.0
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0.470588, 0.470588, 0.470588, 1 )
 metallic = 1.0
 roughness = 0.0
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.435294, 0.435294, 0.435294, 1 )
 metallic = 1.0
 roughness = 0.0
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.588235, 0.588235, 0.588235, 1 )
 metallic = 0.76
 roughness = 0.78
 
-[sub_resource type="QuadMesh" id=10]
+[sub_resource type="QuadMesh" id=9]
 size = Vector2( 50000, 50000 )
 
 [node name="Spatial" type="Spatial"]
@@ -46,16 +46,16 @@ transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
 [node name="Bike" type="MeshInstance" parent="."]
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 1 )
-material/1 = SubResource( 2 )
-material/2 = SubResource( 3 )
-material/3 = SubResource( 4 )
-material/4 = SubResource( 5 )
-material/5 = SubResource( 6 )
-material/6 = SubResource( 7 )
-material/7 = SubResource( 8 )
-material/8 = SubResource( 9 )
-material/9 = SubResource( 9 )
-material/10 = SubResource( 8 )
+material/1 = SubResource( 1 )
+material/2 = SubResource( 2 )
+material/3 = SubResource( 3 )
+material/4 = SubResource( 4 )
+material/5 = SubResource( 5 )
+material/6 = SubResource( 6 )
+material/7 = SubResource( 7 )
+material/8 = SubResource( 8 )
+material/9 = SubResource( 8 )
+material/10 = SubResource( 7 )
 script = ExtResource( 3 )
 sensitivity = 0.01
 
@@ -65,7 +65,7 @@ light_color = Color( 1, 0.890196, 0, 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -500, 0 )
-mesh = SubResource( 10 )
+mesh = SubResource( 9 )
 material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
