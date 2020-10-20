@@ -22,13 +22,21 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/width=512
+window/size/height=300
+window/size/borderless=true
+window/dpi/allow_hidpi=true
+window/per_pixel_transparency/enabled=true
 window/ios/hide_home_indicator=false
 window/stretch/aspect="keep_height"
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
+quality/filters/anisotropic_filter_level=8
 vram_compression/import_etc=true
+quality/directional_shadow/size=4095
+quality/shadows/filter_mode=0
+quality/filters/use_nearest_mipmap_filter=true
 environment/default_clear_color=Color( 1, 1, 1, 1 )
 quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
