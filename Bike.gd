@@ -2,7 +2,7 @@ extends MeshInstance
 
 var pressed = false
 export var sensitivity = 1.00
-
+export var bikeColor : SpatialMaterial
 
 func _process(_delta):
 	
@@ -17,3 +17,9 @@ func _input(event):
 			pressed = true
 		else :
 			pressed = false
+
+
+func _on_ColorPickerButton_color_changed(color):
+	bikeColor.set_albedo(color)
+	pressed = false
+	pass
