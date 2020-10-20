@@ -27,7 +27,6 @@ window/stretch/aspect="keep_height"
 
 [rendering]
 
-quality/driver/fallback_to_gles2=true
 environment/default_clear_color=Color( 1, 1, 1, 1 )
 quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
